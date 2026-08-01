@@ -70,12 +70,14 @@ function Dashboard() {
             return;
         }
 
-        console.log({
-            interviewType,
-            role,
-            technology,
-            difficulty,
-            questionCount
+        navigate("/interview", {
+            state: {
+                interviewType,
+                role,
+                technology,
+                difficulty,
+                questionCount
+            }
         });
     }
      const handleInterviewTypeChange = (e) => {

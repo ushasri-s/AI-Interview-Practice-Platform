@@ -3,7 +3,10 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
+import  Interview from "./pages/Interview";
+
 import ProtectedRoute from "./components/ProtectedRoute";
+
 
 function App() {
   return (
@@ -24,6 +27,13 @@ function App() {
             </ProtectedRoute>
           }
         />
+
+        <Route 
+          path="/interview" element={
+          <ProtectedRoute>
+            <Interview />
+          </ProtectedRoute>
+        } />
 
       </Routes>
     </BrowserRouter>

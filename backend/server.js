@@ -8,11 +8,13 @@ const app = express();
 connectDB();
 const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
+const interviewRoutes = require("./routes/interviewRoutes");
 
 app.use(cors());
 app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/user",userRoutes);
+app.use("/api/interview", interviewRoutes);
 
 
 
